@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css.css">
+    <title>Register</title>
+</head>
+<body>
+    <div class="wrap">
+    <header>
+        <div class="image">
+            <img src="logo1.gif" alt="Caroline Rentals"/>
+        </div>
+        <div class="button-box">
+    <button class="button button2" onclick="document.location='Login.html'"><b>Login</b></button>
+    <button class="button button2" onclick="document.location='Register.html'"><b>Register</b></button>
+    </div>
+    </header>
+<div class="topnav">
+    <ul>
+    <li><a href="Home.html"><b>Home</b></a></li>
+    <li class="dropdown">
+        <a href="Product.html"class ="dropbtn"><b>Product</b></a>
+        <div class="dropdown-content">
+            <a href="Product.html"><b>Family Car</b></a>
+            <a href="#commercialcar"><b>Commercial Car</b></a>
+            <a href="#luxurycar"><b>Luxury Car</b></a>
+        </div>
+    </li>
+    <li><a href="Contact.html"><b>Contact</b></a></li>
+    </ul>
+
+</div>
+        <div class="register">
+        <h1 style="font-family: Arial, Helvetica, sans-serif;text-align: center;margin-left:40px;"><b>Register</b></h1>
+        <form>
+        <h3 style="margin-left:180px;">Name :</h3>
+        <input type="text1" name="username" id="username" required>
+        <h3 style="margin-left:180px;">Email :</h3>
+        <input type="text2" name="Email" id="email" required>
+        <h3 style="margin-left:180px;">Gender :</h3>
+       <input type="radio" name="gender" class="textbox" value="Male" id="radioMale"style ="margin-left:180px" ><b>Male</b>
+        <input type="radio" name="gender" class="textbox" value="Female" id="radioFemale"><b>Female</b>
+        <h3 style="margin-left:180px;">City :</h3>
+        <select id="City" name="City">
+            <option value ="-1" id="-1"><b>[Choose your City]</b></option>
+            <option value="jakarta"><b>Jakarta</b></option>
+            <option value="bekasi"><b>Bekasi</b></option>
+            <option value="bandung"><b>Bandung</b></option>
+            </select>
+        <h3 style="margin-left:180px;"><b>Address :</b></h3>
+            <textarea id="address" name="Address"></textarea>
+        </div>
+        <button class="loginbutton" type="submit" onclick="validate();"><b>Register</b></button>
+        </form>
+        <div class="container">
+         <h2>Subscribe Our Newsletter</h2>
+       <input type="text"placeholder="Your Email">
+       <div class="buttonbox">
+       <button class="button button2"><b>Subscribe</b></button>
+       </div>
+     </div>
+     <div class="foto1">
+         <img src="instagram.png"  alt="Instagram"/>  
+         <img src="youtube.png"  alt="Youtube"/>
+         <img src="twitter.png" alt="Twitter"/>
+         <img src="facebook.png" alt="Facebook"/>
+     </div>
+    </div>
+       <div class="footer">
+         <p><b>&copyCopyright 2018 by Nicholas Valenthinus Tanoto</b></p>
+       </div>
+</body>
+</html>
+
+<script>
+    function validate(){
+    let username = document.getElementById("username").value;
+    let email = document.getElementById("email").value;
+    let mailformat = /\S+@\S+\.\S+/;
+    let gender = document.getElementsByName("gender");
+    let select = document.getElementById("City");
+    let address = document.getElementById("address").value;
+    let addressformat = /^\s[A-z]+\s[A-z]+/g;
+    if(username == null || username == ""){
+        alert("Please input the name!");
+    return false;
+    }
+    if(email == ""){
+        alert("Please input your email!");
+        return false;
+    }
+    else if(!(email.match(mailformat)))
+    {
+        alert("Please input a valid email address!");
+    return false;
+    }
+    
+    if(!(gender[0].checked || gender[1].checked)){
+        alert("Please select your Gender!");
+        return false;
+    }
+    if(select.value == "-1"){
+        alert("Please select your City!");
+        return false;
+    }
+    if(address == "")
+    {
+        alert("Please input the address!");
+        return false;
+    }
+    else if(!(address.includes("Street")))
+    {
+        alert("Must include Street word!");
+        return false;
+    }
+    alert('Register Successful');
+    }
+</script>

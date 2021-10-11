@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+    <html lang="en">
+        <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <link rel="stylesheet" href="css.css">
+            <link rel="stylesheet" href="logincss.css">
+            <title>Login</title>
+        </head>
+        <body>
+            <div class="wrap">
+            <header>
+                <div class="image">
+                    <img src="logo1.gif" alt="Caroline Rentals"/>
+                </div>
+                <div class="button-box">
+            <button class="button button2" onclick="document.location='Login.html'"><b>Login</b></button>
+            <button class="button button2" onclick="document.location='Register.html'"><b>Register</b></button>
+            </div>
+            </header>
+        <div class="topnav">
+            <ul>
+            <li><a href="Home.html"><b>Home</b></a></li>
+            <li class="dropdown">
+                <a href="Product.html"class ="dropbtn"><b>Product</b></a>
+                <div class="dropdown-content">
+                    <a href="Product.html"><b>Family Car</b></a>
+                    <a href="#commercialcar"><b>Commercial Car</b></a>
+                    <a href="#luxurycar"><b>Luxury Car</b></a>
+                </div>
+            </li>
+            <li><a href="Contact.html"><b>Contact</b></a></li>
+            </ul>
+        
+        </div>
+        
+            <div class="Login">
+                <h1 style="font-family: Arial, Helvetica, sans-serif;"><b>Login</b></h1>
+                <form>
+                <h3>Email</h3>
+                <input type="texts" name="username" id ="username" required>
+                <h3>Password</h3>
+                <input type="password" name="password" id ="password" required>  
+            </div>
+            <button class="loginbutton" type="submit" onclick ="validate();"><b>Login</b></button>
+        </form>
+           <h3 style="font-family: Arial, Helvetica, sans-serif;font-size: small;margin-top:-25px;"><center>Dont have an account? Register <a href="Register.html" style="text-decoration: none;">here!</a></center></h3>
+           <div class="container">
+            <h2>Subscribe Our Newsletter</h2>
+          <input type="text"placeholder="Your Email">
+          <div class="buttonbox">
+          <button class="button button2"><b>Subscribe</b></button>
+          </div>
+        </div>
+        <div class="foto4">
+            <img src="instagram.png"  alt="Instagram"/>  
+            <img src="youtube.png"  alt="Youtube"/>
+            <img src="twitter.png" alt="Twitter"/>
+            <img src="facebook.png" alt="Facebook"/>
+        </div>
+    </div>
+          <div class="footer">
+            <p><b>&copyCopyright 2018 by Nicholas Valenthinus Tanoto</b></p>
+          </div>
+        </body>
+</html>
+
+<script>
+function validate(){
+    let username = document.getElementById("username").value;
+    let password = document.getElementById("password").value;
+
+    if(username == null || username == ""){
+        alert("Please input the email!");
+    return false;
+    }
+    if(password == null || password ==""){
+        alert("Please input the password!");
+        return false;
+    }
+    alert('Login successful');
+}
+
+</script>
