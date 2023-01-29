@@ -1,4 +1,5 @@
 
+
 img{
     max-width : 25%;
 }
@@ -304,7 +305,8 @@ header#lol {
     background-image : url(Alphard.jpg);
     background-size : cover;
     height : 100vh;
-    width : auto;
+    width : 98%;
+    max-width: 100%;
     margin :0px;
     background-position: center;
     background-repeat: no-repeat;
