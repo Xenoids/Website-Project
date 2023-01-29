@@ -308,4 +308,5 @@ header#lol {
     margin :0px;
     background-position: center;
     background-repeat: no-repeat;
+    display : flex;
 }
